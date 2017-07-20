@@ -1,5 +1,3 @@
-# prime-solo-mongo
-
 // 1
 db.createCollection('orders')
 
