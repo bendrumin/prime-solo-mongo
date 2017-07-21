@@ -1,9 +1,17 @@
 # prime-solo-mongo
 
-// 1
+# prime-solo-mongo
+
+1
+
+```
 db.createCollection('orders')
+```
 
 //2
+
+
+```sql
 db.getCollection('orders').insert({
   orderDate: new Date ("2017-02-03"),
   orderTotal: 5.00,
@@ -28,20 +36,34 @@ db.getCollection('orders').insert({
   lineItem: [ {unitPrice: 1, quantity: 6, productName: "iPhone 7 Plus"} ]
 
   });
+```
 
 3//
+
+```sql
 db.getCollection('orders').find({}).pretty()
+```
 
 4//
+
+```sql
 db.getCollection('orders').find({orderDate: {$gt: new Date('2017-01-31')}})
+```
 
 5//
+
+```sql
 db.getCollection('orders').update({orderDate: new Date("2017-02-03")}, {$set: {orderTotal: 63}});
+```
 
 6//
+
+```sql
 db.getCollection('orders').update({
     orderDate: new Date("2017-02-03")},
     {$push: {lineItem: {unitPrice: 12, quantity: 1, productName: "LED suspenders"}}}
 );
+```
 
 7//
+
